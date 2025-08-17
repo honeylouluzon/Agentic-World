@@ -85,7 +85,7 @@ The Agentic AI World diagram illustrates a conceptual model for deploying, manag
 
 ---
 
-### 📊 Conceptual Insight
+**📊 CONCEPTUAL INSIGHT**
 
 The diagram highlights a balance between **standardization** and **modularity**:  
 - **Standardization** comes from the agent structure (communication protocols, data exchange format).  
