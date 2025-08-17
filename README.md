@@ -5,7 +5,7 @@
 > **Note:** **AgentOS** refers to [genai-agentos](https://github.com/genai-works-org/genai-agentos) by GenAI Works.
 
 <details>
-<summary>Chapter 1 — Explaining the Agentic AI World Diagram</summary>
+<summary>Phase 1 — Explaining the Agentic AI World Diagram</summary>
 
 - Interpret the diagram.  
 - Clarify AgentOS, Agentic AI, and Agent Library.  
@@ -15,7 +15,7 @@
 </details>
 
 <details>
-<summary>Chapter 2 — Agent Library Architecture & Maintenance Application</summary>
+<summary>Phase 2 — Agent Library Architecture & Maintenance Application</summary>
 
 - Design philosophy.  
 - Grouping by function/role.  
@@ -25,7 +25,7 @@
 </details>
 
 <details>
-<summary>Chapter 3 — Standard Structure of Agentic AI</summary>
+<summary>Phase 3 — Standard Structure of Agentic AI</summary>
 
 - Universal schema.  
 - Behavior modes.  
@@ -35,7 +35,7 @@
 </details>
 
 <details>
-<summary>Chapter 4 — MRDs Integration</summary>
+<summary>Phase 4 — MRDs Integration</summary>
 
 - Revisit FlowVoice, FlowSense, AgentMind Map.  
 - Align with standards and library.  
@@ -44,7 +44,7 @@
 </details>
 
 <details>
-<summary>Chapter 5 — Future Enhancements</summary>
+<summary>Phase 5 — Future Enhancements</summary>
 
 - Cross-VM orchestration.  
 - Self-maintenance.  
@@ -52,7 +52,7 @@
 
 </details>
 
-## Chapter 1 — Explaining the Agentic AI World Diagram
+## Phase 1 — Explaining the Agentic AI World Diagram
 # 📖 Agentic AI World — Planned Document Workflow
 
 *The "Agentic AI World" represents a conceptual ecosystem where autonomous agents, orchestrated by [AgentOS](https://github.com/genai-works-org/genai-agentos), interact through standardized structures and shared libraries. This world balances imagination with technical rigor — serving both as a blueprint and a vision for scalable agent-driven systems.*  
