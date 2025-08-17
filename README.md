@@ -1,6 +1,6 @@
 # Agentic Framework
 
-# 📖 Planned Document Workflow — Table of Contents
+## 📖 Planned Document Workflow — Table of Contents
 
 > **Note:** **AgentOS** refers to [genai-agentos](https://github.com/genai-works-org/genai-agentos) by GenAI Works.
 
