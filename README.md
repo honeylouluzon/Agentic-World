@@ -1,13 +1,53 @@
 # Agentic Framework
 
-# ​ Planned Document Workflow — Table of Contents
+# 📖 Planned Document Workflow — Table of Contents
 
-> **Note:** Throughout this document, **AgentOS** specifically refers to the open-source **[genai-agentos](https://github.com/genai-works-org/genai-agentos)** infrastructure by GenAI Works—an orchestrator platform supporting GenAI Agent management and operations.
+> **Note:** **AgentOS** refers to [genai-agentos](https://github.com/genai-works-org/genai-agentos) by GenAI Works.
 
-| **Chapter** | **Title** | **Key Points / Subtopics** |
-|-------------|-----------|-----------------------------|
-| **1** | Explaining the Agentic AI World Diagram | • Interpret the diagram you provided.<br>• Clarify **AgentOS (VM orchestrator)** — specifically referencing the **genai-agentos** platform by GenAI Works  [oai_citation:0‡GitHub](https://github.com/genai-works-org/genai-agentos?utm_source=chatgpt.com) [oai_citation:1‡DeepWiki](https://deepwiki.com/genai-works-org/genai-agentos/1-overview?utm_source=chatgpt.com), **Agentic AI** (Dockerized per function), and **Agent Library**.<br>• Explain communication mechanisms (APIs, JSON, DB sync).<br>• Discuss why VM-based deployment vs Kubernetes (ease of maintenance, portability, orchestration reasoning). |
-| **2** | Agent Library Architecture & Maintenance Application | • Design philosophy: scalable, modular, auto-recognizable agents.<br>• How agents are grouped (by function, capability, role).<br>• Library governance app:<br>  – UI for managing agents (add/update/remove).<br>  – Indexing/search functions.<br>  – Metadata schema (purpose, input/output, dependencies).<br>• Best practices: version control, lifecycle management, security. |
-| **3** | Standard Structure of Agentic AI | • Define a universal schema for agents (input/output handling, event-driven, autonomous behavior).<br>• Behavior modes: pipeline, reactor, fully autonomous.<br>• Communication standards: JSON formats, APIs, and event logs.<br>• Adaptability: how any agent “understands” its assigned role from the library.<br>• Inter-agent communication and database responsibility. |
-| **4** | Mod Requirements Documents (MRDs) Integration | • Revisit FlowVoice, FlowSense, and AgentMind Map.<br>• Improvements needed so they align with:<br>  – Standardized Agentic AI structure.<br>  – Scalable Agent Library.<br>• Example:<br>  – AgentMind Map → must visualize using library grouping.<br>  – FlowSense → must validate flows against standard schema.<br>  – FlowVoice → must reference agent roles directly from the library. |
-| **5** | Future Enhancements *(Optional if we extend later)* | • Ideas for cross-VM orchestration.<br>• Intelligent self-maintenance (agents updating themselves in the library).<br>• AI-driven auto-deployment and scaling strategies. |
+<details>
+<summary>Chapter 1 — Explaining the Agentic AI World Diagram</summary>
+
+- Interpret the diagram.  
+- Clarify AgentOS, Agentic AI, and Agent Library.  
+- Explain communication mechanisms.  
+- VM vs Kubernetes reasoning.  
+
+</details>
+
+<details>
+<summary>Chapter 2 — Agent Library Architecture & Maintenance Application</summary>
+
+- Design philosophy.  
+- Grouping by function/role.  
+- Governance app (UI, indexing, metadata).  
+- Best practices.  
+
+</details>
+
+<details>
+<summary>Chapter 3 — Standard Structure of Agentic AI</summary>
+
+- Universal schema.  
+- Behavior modes.  
+- Communication standards.  
+- Adaptability and inter-agent communication.  
+
+</details>
+
+<details>
+<summary>Chapter 4 — MRDs Integration</summary>
+
+- Revisit FlowVoice, FlowSense, AgentMind Map.  
+- Align with standards and library.  
+- Examples (Mind Map, FlowSense, FlowVoice).  
+
+</details>
+
+<details>
+<summary>Chapter 5 — Future Enhancements</summary>
+
+- Cross-VM orchestration.  
+- Self-maintenance.  
+- Auto-deployment & scaling.  
+
+</details>
