@@ -508,3 +508,53 @@ Search --> LibraryGovernanceApp
 Metadata --> LibraryGovernanceApp
 ```
 </pre>
+
+---
+
+### 2.4 Best Practices: Version Control, Lifecycle Management, Security
+
+The Agent Library is only as reliable as the practices that govern it. To ensure long-term stability, scalability, and trustworthiness, three pillars are emphasized: **version control, lifecycle management, and security.**
+
+---
+
+#### 1. Version Control
+- **Semantic Versioning (semver)** → Agents follow `major.minor.patch` convention.  
+  - **Major** → Breaking changes (e.g., input/output schema modified).  
+  - **Minor** → Backward-compatible enhancements (e.g., new supported languages).  
+  - **Patch** → Bug fixes or performance improvements.  
+- **Immutable History** → Old versions remain available for reproducibility.  
+- **Deprecation Warnings** → Developers are alerted when flows reference outdated agents.  
+
+💡 *Analogy: Like software packages (npm, pip), versioning keeps agent evolution safe and predictable.*
+
+---
+
+#### 2. Lifecycle Management
+- **States**:  
+  - **Active** → Currently supported and recommended for use.  
+  - **Experimental** → In testing; may lack full guarantees.  
+  - **Deprecated** → Retained for backward compatibility but discouraged in new flows.  
+- **Update Policy**:  
+  - Updates must trigger dependency validation to prevent breaking flows.  
+  - Automated tests confirm agent compatibility before status changes.  
+- **Archival**:  
+  - Deprecated agents eventually move to archived state but remain queryable in the library for audit trails.  
+
+💡 *Analogy: Like a library book lifecycle: new books arrive, old ones move to storage, but nothing is lost.*
+
+---
+
+#### 3. Security
+- **Metadata Security Flags** → Identify agents that handle sensitive or restricted data.  
+- **Agent Validation** → Agents are scanned for malicious code or misconfigurations before entry.  
+- **Execution Sandbox** → Each agent runs in isolated Agentic AI containers to prevent cross-agent interference.  
+- **Access Control** → Governance app enforces role-based permissions (e.g., only admins can deprecate or archive agents).  
+
+💡 *Analogy: Like airport security checks, every agent must pass a safety inspection before being cleared for use.*
+
+---
+
+✅ With these best practices in place, the **Agent Library** becomes a resilient and trustworthy foundation, supporting innovation while preventing chaos as the ecosystem scales.
+
+---
+
