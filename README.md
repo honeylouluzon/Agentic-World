@@ -455,3 +455,56 @@ A consistent metadata structure ensures plug-and-play compatibility across the A
 - **AgentOS orchestrates** these API conversations across agents.  
 
 👉 *This separation ensures that the Library stays universal and portable, while Agentic AI containers handle runtime-specific details.*
+
+<pre>
+   '''mermaid
+flowchart TD
+
+subgraph LibraryGovernanceApp["📚 Library Governance App"]
+    UI["1. UI for Managing Agents"]
+    Search["2. Indexing & Search Functions"]
+    Metadata["3. Metadata Schema"]
+end
+
+subgraph UI["UI for Managing Agents"]
+    Add["➕ Add New Agent"]
+    Update["✏️ Update Agent"]
+    Remove["🗑️ Deprecate/Remove Agent"]
+end
+
+subgraph Search["Indexing & Search Functions"]
+    FullText["🔍 Full-text Search"]
+    Filter["📂 Filter by Group"]
+    Dependency["🔗 Dependency-aware Search"]
+    Similarity["🤝 Similarity Recommendations"]
+    Version["📌 Version Awareness"]
+end
+
+subgraph Metadata["Metadata Schema"]
+    Core["Core Fields"]
+    Optional["Optional / Advanced Fields"]
+    WhySchema["Why Strict Schema Matters"]
+end
+
+subgraph Core["Core Fields"]
+    Name["Name"]
+    Purpose["Purpose"]
+    Function["Function Type"]
+    Input["Input Schema"]
+    Output["Output Schema"]
+    Dependencies["Dependencies"]
+    Version["Version"]
+    Status["Status"]
+end
+
+subgraph Optional["Optional / Advanced Fields"]
+    Perf["Performance Benchmarks"]
+    Tags["Tags"]
+    Security["Security Flags"]
+end
+
+UI --> LibraryGovernanceApp
+Search --> LibraryGovernanceApp
+Metadata --> LibraryGovernanceApp
+'''
+</pre>
