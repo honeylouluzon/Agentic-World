@@ -235,12 +235,14 @@ For larger and more persistent workflows, databases serve as shared memory and c
 ---
 
 ### 📊 Integrated View of Communication
-[AgentOS (VM Orchestrator)]
-        |
-        |  -- API Calls -->
-        |
-   [Agentic AI Containers] <---- JSON ----> [Agent Library]
-        | 
-        | -- Sync/Async Writes --> [Shared Database]
-        |
-  (Other VMs / Systems via API)
+```mermaid
+flowchart TD
+
+    A[AgentOS (VM Orchestrator)] 
+    A -->|API Calls| B[Agentic AI Containers]
+    A -->|API Calls| C[Agent Library]
+
+    B <-->|JSON Messaging| C
+
+    B -->|Sync / Async Writes| D[Shared Database]
+    D -->|External APIs| E[Other VMs / Systems]
