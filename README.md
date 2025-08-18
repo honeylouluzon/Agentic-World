@@ -457,7 +457,7 @@ A consistent metadata structure ensures plug-and-play compatibility across the A
 👉 *This separation ensures that the Library stays universal and portable, while Agentic AI containers handle runtime-specific details.*
 
 <pre>
-   '''mermaid
+```mermaid
 flowchart TD
 
 subgraph LibraryGovernanceApp["📚 Library Governance App"]
@@ -506,5 +506,5 @@ end
 UI --> LibraryGovernanceApp
 Search --> LibraryGovernanceApp
 Metadata --> LibraryGovernanceApp
-'''
+```
 </pre>
