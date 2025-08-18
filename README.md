@@ -10,7 +10,6 @@
 - Interpret the diagram.  
 - Clarify AgentOS, Agentic AI, and Agent Library.  
 - Explain communication mechanisms.  
-- VM vs Kubernetes reasoning.  
 
 </details>
 
@@ -250,4 +249,12 @@ For larger and more persistent workflows, databases serve as shared memory and c
     D -->|External APIs| E[Other VMs / Systems] 
 ```
 </pre>
+
+### Deployment Note
+
+While **Kubernetes** is a widely used orchestration platform, the current design leverages **GenAI AgentOS** on **VM-based environments** for accessibility and simplicity.  
+
+This choice does not preclude future **Kubernetes adoption** if scaling requires it.
+
+
 
