@@ -250,6 +250,8 @@ For larger and more persistent workflows, databases serve as shared memory and c
 ```
 </pre>
 
+---
+
 ### Deployment Note
 
 While **Kubernetes** is a widely used orchestration platform, the current design leverages **GenAI AgentOS** on **VM-based environments** for accessibility and simplicity.  
