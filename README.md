@@ -51,6 +51,8 @@
 
 </details>
 
+---
+
 ## Phase 1 — Explaining the Agentic AI World Diagram
 
 *The "Agentic AI World" represents a conceptual ecosystem where autonomous agents, orchestrated by [AgentOS](https://github.com/genai-works-org/genai-agentos), interact through standardized structures and shared libraries. This world balances imagination with technical rigor — serving both as a blueprint and a vision for scalable agent-driven systems.*  
@@ -258,5 +260,50 @@ While **Kubernetes** is a widely used orchestration platform, the current design
 
 This choice does not preclude future **Kubernetes adoption** if scaling requires it.
 
+---
 
+## 📖 Phase 2 — Agent Library Architecture & Maintenance Application
+
+### 2.1 Design Philosophy
+The **Agent Library** is the semantic backbone of the *Agentic AI World*.  
+Its purpose extends beyond storing agent definitions—it ensures that agents are discoverable, interoperable, and composable within any flow.  
+
+The design philosophy rests on three principles: **scalability, modularity, and auto-recognition**.
+
+---
+
+### 1. Scalable
+- The library must grow seamlessly as the number of agents expands from dozens to thousands.  
+- Each agent definition is lightweight, stored in structured formats (e.g., JSON/YAML).  
+- Indexing and metadata tagging ensure that even at scale, agents remain searchable in real-time.  
+- Scalability is not only about quantity—it also covers versioning, allowing multiple iterations of the same agent to coexist without conflict.  
+
+💡 **Analogy:** Just like a digital app store, the library should handle thousands of “apps” (agents) without losing performance or clarity.  
+
+---
+
+### 2. Modular
+- Each agent is self-contained—defined by its role, inputs, outputs, and dependencies.  
+- Agents are grouped into categories (e.g., NLP, Planning, Data I/O, Diagnostics) but can be recombined flexibly across flows.  
+- Modularity ensures reusability: the same summarization agent can work in a research flow, customer service flow, or monitoring system.  
+- Dependencies between agents are explicit, preventing “hidden couplings” that reduce reliability.  
+
+💡 **Analogy:** Think of the library as a box of LEGO bricks—each piece is modular, but the combinations are limitless.  
+
+---
+
+### 3. Auto-Recognizable
+- Newly introduced agents should be automatically recognized by the library without requiring manual registration.  
+- Recognition is enabled through self-descriptive metadata, such as:  
+  - Agent name and purpose  
+  - Input/output schemas  
+  - Supported communication methods (API, event-driven, DB sync)  
+  - Role category (pipeline step, reactor, or autonomous)  
+- Auto-recognition enables plug-and-play scalability—the system adapts as soon as a new agent is added.  
+
+💡 **Analogy:** Like plugging in a USB drive, the agent should be ready to use immediately once placed in the library.  
+
+---
+
+✅ With this philosophy, the **Agent Library** is not just a storage system, but a **living ecosystem** that scales, evolves, and adapts without human bottlenecks.  
 
