@@ -7,47 +7,47 @@
 <details>
 <summary>Phase 1 — Explaining the Agentic AI World Diagram</summary>
 
-- Interpret the diagram.  
-- Clarify AgentOS, Agentic AI, and Agent Library.  
-- Explain communication mechanisms.  
+- [Interpret the diagram.](#interpret-the-diagram)  
+- [Clarify AgentOS, Agentic AI, and Agent Library.](#clarify-agentos-agentic-ai-and-agent-library)  
+- [Explain communication mechanisms.](#explain-communication-mechanisms)  
 
 </details>
 
 <details>
 <summary>Phase 2 — Agent Library Architecture & Maintenance Application</summary>
 
-- Design philosophy.  
-- Grouping by function/role.  
-- Governance app (UI, indexing, metadata).  
-- Best practices.  
+- [Design philosophy.](#design-philosophy)  
+- [Grouping by function/role.](#grouping-by-function-role)  
+- [Governance app (UI, indexing, metadata).](#governance-app-ui-indexing-metadata)  
+- [Best practices.](#best-practices)  
 
 </details>
 
 <details>
 <summary>Phase 3 — Standard Structure of Agentic AI</summary>
 
-- Universal schema.  
-- Behavior modes.  
-- Communication standards.  
-- Adaptability and inter-agent communication.  
+- [Universal schema.](#universal-schema)  
+- [Behavior modes.](#behavior-modes)  
+- [Communication standards.](#communication-standards)  
+- [Adaptability and inter-agent communication.](#adaptability-and-inter-agent-communication)  
 
 </details>
 
 <details>
 <summary>Phase 4 — MRDs Integration</summary>
 
-- Revisit FlowVoice, FlowSense, AgentMind Map.  
-- Align with standards and library.  
-- Examples (Mind Map, FlowSense, FlowVoice).  
+- [Revisit FlowVoice, FlowSense, AgentMind Map.](#revisit-flowvoice-flowsense-agentmind-map)  
+- [Align with standards and library.](#align-with-standards-and-library)  
+- [Examples (Mind Map, FlowSense, FlowVoice).](#examples-mind-map-flowsense-flowvoice)  
 
 </details>
 
 <details>
 <summary>Phase 5 — Future Enhancements</summary>
 
-- Cross-VM orchestration.  
-- Self-maintenance.  
-- Auto-deployment & scaling.  
+- [Cross-VM orchestration.](#cross-vm-orchestration)  
+- [Self-maintenance.](#self-maintenance)  
+- [Auto-deployment & scaling.](#auto-deployment--scaling)  
 
 </details>
 
