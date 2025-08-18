@@ -312,3 +312,66 @@ The design philosophy rests on three principles: **scalability, modularity, and 
 
 ✅ With this philosophy, the **Agent Library** is not just a storage system, but a **living ecosystem** that scales, evolves, and adapts without human bottlenecks.  
 
+### 2.2 How Agents Are Grouped
+
+The **Agent Library** uses a **layered grouping system** to ensure clarity, reuse, and composability.  
+Instead of mixing all properties together, we separate what belongs to the agent itself from what is determined by the **Agentic AI runtime** and the **flow orchestration**.
+
+---
+
+#### 1. Agent-Level: Grouping by Function  
+
+Function is intrinsic to the agent. It describes what the agent does at its core.
+
+- **Data Processing Agents** → Transform or clean inputs without altering meaning.  
+  _(e.g., parsers, formatters, converters)_  
+- **Knowledge Agents** → Analyze inputs and generate new data or insights.  
+  _(e.g., summarizers, translators, fact-checkers)_  
+- **Decision Agents** → Output choices or instructions based on inputs.  
+  _(e.g., flow optimizer, planner)_  
+- **Action Agents** → Perform or execute commands directly.  
+  _(e.g., API caller, database writer)_  
+- **Monitoring Agents** → Continuously observe and report system or environmental states.  
+  _(e.g., health checker, watchdog)_  
+
+💡 *This grouping belongs inside the Agent Library as metadata tags.*
+
+---
+
+#### 2. Runtime-Level: Grouping by Capability  
+
+Capabilities describe how the **Agentic AI runtime** executes the agent, not the agent code itself.
+
+- **Basic** → Runs a single operation per invocation.  
+- **Composite** → Chains multiple internal sub-steps before returning output.  
+- **Adaptive** → Adjusts behavior based on input context (enabled by runtime providing memory/context).  
+- **Autonomous** → Runs continuously or self-triggers actions without external flow control.  
+
+💡 *This is determined by how the AgentOS containerizes and augments the agent, not by the agent’s source code.*
+
+---
+
+#### 3. Flow-Level: Grouping by Role  
+
+Roles describe how the agent is positioned in a workflow. This is assigned during flow design, not coded into the agent.
+
+- **Pipeline Step** → Executes sequentially in a defined order.  
+- **Reactor (Event-Driven)** → Responds when a trigger/event occurs.  
+- **Orchestrator Helper** → Validates, routes, or adapts data between agents.  
+- **Standalone** → Runs independently for monitoring, background tasks, or scheduled jobs.  
+
+💡 *This is managed by the Flow Builder and AgentOS during orchestration, not the agent itself.*
+
+---
+
+**📊 INTEGRATED PERSPECTIVE** 
+
+- **Function** → Defined in the agent (*what it does*).  
+- **Capability** → Applied by the runtime (*how it runs*).  
+- **Role** → Assigned in the flow (*where it fits*).  
+
+This **separation of concerns** keeps agents lightweight and reusable, while allowing the AgentOS and flows to adapt their behavior dynamically.
+
+---
+
+✅ With this refinement, the **Agent Library** avoids redundancy, provides a clear classification, and aligns with how actual implementation would work.
