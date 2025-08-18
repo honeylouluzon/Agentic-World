@@ -50,8 +50,7 @@
 </details>
 
 ---
-<details>
-<summary>## Phase 1 — Explaining the Agentic AI World Diagram</summary>
+## Phase 1 — Explaining the Agentic AI World Diagram</summary>
 
 *The "Agentic AI World" represents a conceptual ecosystem where autonomous agents, orchestrated by [AgentOS](https://github.com/genai-works-org/genai-agentos), interact through standardized structures and shared libraries. This world balances imagination with technical rigor — serving both as a blueprint and a vision for scalable agent-driven systems.*  
 
@@ -261,7 +260,7 @@ While **Kubernetes** is a widely used orchestration platform, the current design
 This choice does not preclude future **Kubernetes adoption** if scaling requires it.
 
 ---
-</details>
+
 ## 📖 Phase 2 — Agent Library Architecture & Maintenance Application
 
 *This chapter focuses on the **conceptual and structural design** of the Agent Library.  
