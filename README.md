@@ -235,7 +235,8 @@ For larger and more persistent workflows, databases serve as shared memory and c
 ---
 
 ### 📊 Integrated View of Communication
-'''mermaid
+<pre>
+```mermaid
 flowchart TD
 
     A[AgentOS (VM Orchestrator)] 
@@ -246,5 +247,6 @@ flowchart TD
 
     B -->|Sync / Async Writes| D[Shared Database]
     D -->|External APIs| E[Other VMs / Systems]
-'''
+```
+</pre>
 
