@@ -375,3 +375,83 @@ This **separation of concerns** keeps agents lightweight and reusable, while all
 ---
 
 ✅ With this refinement, the **Agent Library** avoids redundancy, provides a clear classification, and aligns with how actual implementation would work.
+
+### 2.3 Library Governance App
+
+The **Library Governance App** serves as the dedicated interface for managing the Agent Library.  
+It ensures that agents remain consistent, discoverable, and version-controlled, while also making it easy for developers or administrators to add, update, and maintain them without manual configuration errors.
+
+---
+
+#### 1. UI for Managing Agents (Add / Update / Remove)
+
+The governance app provides a clean, browser-based interface (**client-side HTML/JS/CSS**) with the following features:
+
+- **Add New Agent**
+  - Guided form with fields for agent name, purpose, input schema, output schema, dependencies.  
+  - Option to upload code snippets or YAML/JSON definition files.  
+  - Automatic validation to ensure metadata completeness.  
+
+- **Update Existing Agent**  
+  - Editable metadata (e.g., changing supported languages for a Translator agent).  
+  - Versioning system prompts user to increment major/minor version numbers.  
+  - Dependency check to ensure updates don’t break existing flows.  
+
+- **Remove / Deprecate Agent**  
+  - Agents are never *hard deleted* — they are deprecated with a status flag.  
+  - Old flows can still reference deprecated agents, but new flows get warnings to avoid them.  
+
+💡 *Analogy: Think of this UI as a package manager (like npm or pip) but visually designed for agent definitions.*
+
+---
+
+#### 2. Indexing and Search Functions
+
+To keep the library usable at scale, **indexing and smart search functions** are core.
+
+- **Full-text search** → search by agent name, description, or tags.  
+- **Filter by groupings** → function type (Data Processing, Knowledge, etc.), capability, or role.  
+- **Dependency-aware search** → find agents that can accept the output of another agent.  
+- **Similarity recommendations** → “agents like this” for alternative options.  
+- **Version awareness** → filters that distinguish active, deprecated, or legacy agents.  
+
+💡 *This ensures developers don’t waste time reinventing agents — they can quickly discover what’s already in the library.*
+
+---
+
+#### 3. Metadata Schema
+
+Each agent must follow a **standard metadata schema** that makes it self-descriptive and auto-recognizable by the **AgentOS**.
+
+**Core Fields**
+- **Name** → Human-readable identifier.  
+- **Purpose** → Short description of what the agent does.  
+- **Function Type** → Classification (Data Processing, Knowledge, etc.).  
+- **Input Schema** → JSON schema of required input fields.  
+- **Output Schema** → JSON schema of expected output.  
+- **Dependencies** → Other agents or libraries required.  
+- **Version** → Follows semantic versioning (major.minor.patch).  
+- **Status** → Active / Deprecated / Experimental.  
+
+**Optional / Advanced Fields**
+- **Performance Benchmarks** → e.g., average runtime, memory usage.  
+- **Tags** → Freeform categories (e.g., “multilingual”, “low-latency”).  
+- **Security Flags** → Notes on data sensitivity or safe usage.  
+
+**Why Strict Schema Matters**
+
+A consistent metadata structure ensures plug-and-play compatibility across the Agent Library:  
+- Agents can be automatically validated before entering the library.  
+- Flows can be generated and debugged faster, since inputs/outputs are predictable.  
+- The AgentOS can match and chain agents seamlessly without manual adjustments.  
+
+💡 *Analogy: Metadata is like a nutrition label for agents — standardized, easy to read, and ensures no surprises.*
+
+---
+
+#### 🔑 Clarification on API Details
+- The Agent Library metadata is **descriptive only** (purpose, I/O, dependencies).  
+- **API details** (endpoints, auth, communication protocols) belong to the **Agentic AI container** that implements the agent.  
+- **AgentOS orchestrates** these API conversations across agents.  
+
+👉 *This separation ensures that the Library stays universal and portable, while Agentic AI containers handle runtime-specific details.*
