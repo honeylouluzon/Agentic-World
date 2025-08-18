@@ -14,10 +14,10 @@
 <details>
 <summary>Phase 2 — Agent Library Architecture & Maintenance Application</summary>
 
-- [Design philosophy.](#design-philosophy)  
-- [Grouping by function/role.](#grouping-by-function-role)  
-- [Governance app (UI, indexing, metadata).](#governance-app-ui-indexing-metadata)  
-- [Best practices.](#best-practices)  
+- [2.1 Design Philosophy.](#21-design-philosophy)  
+- [2.2 How Agents Are Grouped.](#22-how-agents-are-grouped)  
+- [2.3 Library Governance App.](#23-library-governance-app)  
+- [2.4 Best Practices: Version Control, Lifecycle Management, Security.](#24-best-practices-version-control-lifecycle-management-security)  
 
 </details>
 
