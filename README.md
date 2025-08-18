@@ -264,6 +264,10 @@ This choice does not preclude future **Kubernetes adoption** if scaling requires
 
 ## 📖 Phase 2 — Agent Library Architecture & Maintenance Application
 
+> **Note:**  
+> This chapter focuses on the **conceptual and structural design** of the Agent Library.  
+> The **technical specifications**—such as JSON/YAML schemas for agent definitions, coding conventions, and API standards—are provided in the **Annexes** as reference materials for implementation.
+
 ### 2.1 Design Philosophy
 The **Agent Library** is the semantic backbone of the *Agentic AI World*.  
 Its purpose extends beyond storing agent definitions—it ensures that agents are discoverable, interoperable, and composable within any flow.  
