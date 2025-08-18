@@ -7,9 +7,9 @@
 <details>
 <summary>Phase 1 — Explaining the Agentic AI World Diagram</summary>
 
-- [Interpret the diagram.](#11-interpret-the-diagram)  
-- [Clarify AgentOS, Agentic AI, and Agent Library.](#12-clarify-agentos-agentic-ai-and-agent-library)  
-- [Explain communication mechanisms.](#13-explain-communication-mechanisms)  
+- [1.1 Interpreting the Diagram.](#11-interpreting-the-diagram)  
+- [1.2 Clarifying the Core Components.](#12-clarifying-the-core-components)  
+- [1.3 Communication Mechanisms.](#13-communication-mechanisms)  
 
 </details>
 
