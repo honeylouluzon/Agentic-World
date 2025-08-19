@@ -663,9 +663,9 @@ To prevent template sprawl and ensure consistent quality, a dedicated **Template
   - **Sharing & Access Control** → Manage which teams can publish, fork, or extend templates.  
   - **Audit Logs** → Track usage across projects (e.g., *“Template X is used in 7 flows”*).
  
+💡 *Analogy: If agents are “individual functions,” then templates are like **design patterns** in software engineering — reusable blueprints that capture proven structures. The governance app ensures these blueprints don’t become outdated or inconsistent.*
+
  📌 **Implementation Note**
 While this framework defines the need for governance mechanisms, the actual design and deployment of governance applications (UI, workflows, integration) will be detailed in a separate Implementation Guide. This ensures the framework remains timeless and principle-driven, while practical tooling can evolve with technology.
-
-💡 *Analogy: If agents are “individual functions,” then templates are like **design patterns** in software engineering — reusable blueprints that capture proven structures. The governance app ensures these blueprints don’t become outdated or inconsistent.*
 
 
