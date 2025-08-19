@@ -244,9 +244,9 @@ For larger and more persistent workflows, databases serve as shared memory and c
 
 ### 📊 Integrated View of Communication
 
-<pre>
-'''mermaid
- graph TD;
+```
+mermaid
+graph TD;
     A[AgentOS (VM Orchestrator)];
     A <-->|API Calls| B[Agentic AI Containers];
     A -->|API Calls| C[Agent Library];
@@ -254,8 +254,7 @@ For larger and more persistent workflows, databases serve as shared memory and c
     B <-->|JSON Messaging| B;
     B -->|Sync / Async Writes| D[Shared Database];
     A <-->|MCP Calls| E[Other VMs / Systems];
-'''
-</pre>
+```
        
 ---
 
