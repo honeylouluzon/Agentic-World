@@ -190,9 +190,17 @@ APIs form the primary conduit for communication between agents, the orchestrator
 
 - **Inter-Agent Communication**  
   - Agents interact via APIs rather than direct coupling, ensuring modularity.  
-  - This decoupled model allows one agent to be replaced without rewriting the entire system.  
+  - This decoupled model allows one agent to be replaced without rewriting the entire system.
+ 
+- **Cross-OS / External Communication via MCP (Model Context Protocol)**
+  - When the AgentOS needs to communicate with another AgentOS, VM, or external applications (e.g., email systems, web services), MCP provides a standardized, secure, and context-rich protocol.
+  - Unlike REST, MCP is designed specifically for model-to-model or agent-to-agent interaction, ensuring that shared context (task state, constraints, memory) is preserved across systems.
+    This enables:
+    - Multi-VM orchestration (different AgentOS instances collaborating).
+    - Seamless integration with external ecosystems (cloud apps, web services).
+    - Future extensibility without re-engineering core communication.
 
-💡 **Insight:** APIs are the *“nervous system”* of Agentic AI—translating intent into actions across distributed components.
+💡 **Insight:** APIs are the *"nervous system"* of Agentic AI—while REST and event-driven APIs handle local reflexes, MCP is like the *"higher-order brain pathway"*, enabling multi-system coordination and external world interaction.
 
 ---
 
