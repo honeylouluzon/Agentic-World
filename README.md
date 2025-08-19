@@ -368,6 +368,9 @@ This **separation of concerns** keeps agents lightweight and reusable, while all
 The **Library Governance App** serves as the dedicated interface for managing the Agent Library.  
 It ensures that agents remain consistent, discoverable, and version-controlled, while also making it easy for developers or administrators to add, update, and maintain them without manual configuration errors.
 
+📌 **Implementation Note**
+While this framework defines the need for governance mechanisms, the actual design and deployment of governance applications (UI, workflows, integration) will be detailed in a separate Implementation Guide. This ensures the framework remains timeless and principle-driven, while practical tooling can evolve with technology.
+
 ---
 
 #### 1. UI for Managing Agents (Add / Update / Remove)
@@ -598,5 +601,71 @@ Because every agent follows this schema:
 💡 *Think of the schema as the “USB Standard” of Agentic AI — once an agent supports it, it can plug into any system without extra adapters.*
 
 ---
+
+### 3.2 Agent Templates and Reusability
+
+To avoid reinventing the wheel for every workflow, **Agent Templates** provide a standardized starting point for common agent patterns. Templates accelerate development, encourage best practices, and ensure structural consistency across the ecosystem.
+
+---
+
+#### Default Templates
+
+The system provides a core set of predefined Agentic AI templates representing recurring roles:
+
+- **Data Transformer** → Cleans, normalizes, or enriches input data (e.g., convert CSV to JSON, text cleaning).  
+- **Knowledge Retriever** → Fetches knowledge from databases, APIs, or vector stores.  
+- **Planner + Executor** → Breaks down goals into steps and performs actions sequentially.  
+- **Monitor/Observer** → Watches streams, logs, or signals and raises events.  
+- **Decision Maker** → Evaluates conditions and outputs recommended choices.  
+
+💡 *These templates act like starter kits — developers only need to fill in specifics (e.g., input schema, data source) while the base behavior is predefined.*
+
+---
+
+#### Custom Templates
+
+- Any composite agent that emerges during orchestration can be saved as a reusable template.  
+- Developers can:  
+  - Export templates to JSON/YAML.  
+  - Version them using semantic versioning.  
+  - Share across teams or publish to the Agent Library.  
+
+**Example:** A custom “Translation + Summarization” agent can be packaged as one unit for reuse in multiple projects.
+
+---
+
+#### Versioning & Sharing
+
+- Templates are version-controlled (e.g., `1.0.0 → 1.1.0`).  
+- Shared via:  
+  - **Agent Library** (global repository).  
+  - **Local/Team Registries** (internal use cases).  
+
+- Templates can be extended:  
+  - Add new capabilities.  
+  - Adjust I/O schemas while maintaining backward compatibility.  
+
+---
+
+#### Template Governance App
+
+To prevent template sprawl and ensure consistent quality, a dedicated **Template Governance App** mirrors the role of the Agent Library Governance App:
+
+- **UI Management**: Add, update, deprecate, or remove templates.  
+- **Indexing & Search**: Browse templates by role (e.g., transformer, retriever) or by metadata (purpose, version, tags).  
+- **Metadata Schema for Templates**:  
+  - **Template Name** → Human-readable identifier.  
+  - **Purpose** → What workflow pattern it supports.  
+  - **Base Agents Used** → Dependencies included.  
+  - **Input/Output Schema** → JSON schema inherited or customized.  
+  - **Version** → Follows semantic versioning.  
+  - **Status** → Active / Deprecated / Experimental.  
+  - **Sharing & Access Control** → Manage which teams can publish, fork, or extend templates.  
+  - **Audit Logs** → Track usage across projects (e.g., *“Template X is used in 7 flows”*).
+ 
+ 📌 **Implementation Note**
+While this framework defines the need for governance mechanisms, the actual design and deployment of governance applications (UI, workflows, integration) will be detailed in a separate Implementation Guide. This ensures the framework remains timeless and principle-driven, while practical tooling can evolve with technology.
+
+💡 *Analogy: If agents are “individual functions,” then templates are like **design patterns** in software engineering — reusable blueprints that capture proven structures. The governance app ensures these blueprints don’t become outdated or inconsistent.*
 
 
