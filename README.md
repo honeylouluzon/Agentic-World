@@ -544,3 +544,59 @@ The Agent Library is only as reliable as the practices that govern it. To ensure
 ✅ With these best practices in place, the **Agent Library** becomes a resilient and trustworthy foundation, supporting innovation while preventing chaos as the ecosystem scales.
 
 ---
+
+## 📖 Phase 3 — Standard Structure of Agentic AI
+
+### 3.1 Universal Agent Schema
+
+The **Universal Agent Schema** defines the minimum contract every Agentic AI must follow to ensure interoperability inside the GenAI AgentOS. By enforcing consistent input/output handling, event awareness, and autonomous triggers, any agent can be seamlessly integrated, reused, and orchestrated without custom wiring.
+
+---
+
+#### Core Principles
+
+1. **Input/Output Handling**  
+   - Every agent must declare its expected input schema (e.g., JSON fields, data types, constraints).  
+   - Every agent must define its output schema with clear guarantees on structure and type.  
+   - This ensures upstream and downstream agents know what to expect, making flows resilient.  
+
+2. **Event Responsiveness**  
+   - Agents must accept events as triggers, not just static inputs.  
+   - Events can be:  
+     - **System Events** (e.g., flow started, timer fired).  
+     - **Agent Events** (e.g., another agent’s output becomes available).  
+     - **External Events** (e.g., webhook, user input).  
+   - Event-driven capability ensures agents can be reactive, not only sequential.  
+
+3. **Autonomous Triggers**  
+   - Certain agents may self-initiate tasks (e.g., monitoring or watchdog agents).  
+   - Autonomous mode is standardized so that AgentOS can throttle, pause, or resume them safely.  
+
+---
+
+#### JSON Schema as the Backbone
+
+All agent definitions rely on **JSON Schema** as the universal format:
+
+- **Input Schema** → Guarantees the required fields.  
+- **Output Schema** → Defines what downstream agents can trust.  
+- **Events** → Lists what this agent can respond to.  
+- **Autonomous Flag** → Clarifies if the agent can self-run without external invocation.  
+
+---
+
+#### Plug-and-Play Compatibility
+
+Because every agent follows this schema:
+
+- Agents can be swapped or updated without breaking flows.  
+- Flows can be auto-validated by AgentOS (input/output mismatches flagged instantly).  
+- The Agent Library can auto-generate documentation and visual previews from metadata.  
+
+---
+
+💡 *Think of the schema as the “USB Standard” of Agentic AI — once an agent supports it, it can plug into any system without extra adapters.*
+
+---
+
+
