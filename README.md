@@ -32,7 +32,7 @@
 </details>
 
 <details>
-<summary>Phase 4 — MRDs Integration</summary>
+<summary>Phase 4 — MRDs Integration fo AgentOS Upgrade</summary>
 
 - [Revisit FlowVoice, FlowSense, AgentMind Map.](#revisit-flowvoice-flowsense-agentmind-map)  
 - [Align with standards and library.](#align-with-standards-and-library)  
