@@ -334,37 +334,20 @@ Function is intrinsic to the agent. It describes what the agent does at its core
 - **Decision Agents** → Output choices or instructions based on inputs.  
   _(e.g., flow optimizer, planner)_  
 - **Action Agents** → Perform or execute commands directly.  
-  _(e.g., API caller, database writer)_  
+  _(e.g., API caller, database writer)_
+  Two Types:
+  1. **Client-Facing Action Agents**
+     - Directly interact with external users, applications, or interfaces.
+     - Examples: UI trigger agent, chatbot API responder, notification sender.
+     - These feel like front-end executors.
+  2. **System-Facing Action Agents**
+     - Perform operations inside the system, databases, or infra.
+     - Examples: database writer, file handler, API caller to internal service.
+     - These feel like backend executors.
 - **Monitoring Agents** → Continuously observe and report system or environmental states.  
   _(e.g., health checker, watchdog)_  
 
 💡 *This grouping belongs inside the Agent Library as metadata tags.*
-
----
-
-#### 2. Runtime-Level: Grouping by Capability  
-
-Capabilities describe how the **Agentic AI runtime** executes the agent, not the agent code itself.
-
-- **Basic** → Runs a single operation per invocation.  
-- **Composite** → Chains multiple internal sub-steps before returning output.  
-- **Adaptive** → Adjusts behavior based on input context (enabled by runtime providing memory/context).  
-- **Autonomous** → Runs continuously or self-triggers actions without external flow control.  
-
-💡 *This is determined by how the AgentOS containerizes and augments the agent, not by the agent’s source code.*
-
----
-
-#### 3. Flow-Level: Grouping by Role  
-
-Roles describe how the agent is positioned in a workflow. This is assigned during flow design, not coded into the agent.
-
-- **Pipeline Step** → Executes sequentially in a defined order.  
-- **Reactor (Event-Driven)** → Responds when a trigger/event occurs.  
-- **Orchestrator Helper** → Validates, routes, or adapts data between agents.  
-- **Standalone** → Runs independently for monitoring, background tasks, or scheduled jobs.  
-
-💡 *This is managed by the Flow Builder and AgentOS during orchestration, not the agent itself.*
 
 ---
 
@@ -561,4 +544,3 @@ The Agent Library is only as reliable as the practices that govern it. To ensure
 ✅ With these best practices in place, the **Agent Library** becomes a resilient and trustworthy foundation, supporting innovation while preventing chaos as the ecosystem scales.
 
 ---
-
