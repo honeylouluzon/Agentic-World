@@ -246,13 +246,13 @@ For larger and more persistent workflows, databases serve as shared memory and c
 
 '''mermaid
  flowchart TD;
-    A[AgentOS (VM Orchestrator)] 
-    A <-->|API Calls| B[Agentic AI Containers]
-    A -->|API Calls| C[Agent Library]
-    B -->|API Calls| C[Agent Library]
-    B <-->|JSON Messaging| B
-    B -->|Sync / Async Writes| D[Shared Database]   
-    A <-->|MCP Calls| E[Other VMs / Systems]
+    A[AgentOS (VM Orchestrator)];
+    A <-->|API Calls| B[Agentic AI Containers];
+    A -->|API Calls| C[Agent Library];
+    B -->|API Calls| C[Agent Library];
+    B <-->|JSON Messaging| B;
+    B -->|Sync / Async Writes| D[Shared Database];
+    A <-->|MCP Calls| E[Other VMs / Systems];
 '''
 
 ---
