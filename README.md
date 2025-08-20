@@ -24,32 +24,24 @@
 <details>
 <summary>Phase 3 — Standard Structure of Agentic AI</summary>
 
-- [Universal schema.](#universal-schema)  
-- [Behavior modes.](#behavior-modes)  
-- [Communication standards.](#communication-standards)  
-- [Adaptability and inter-agent communication.](#adaptability-and-inter-agent-communication)  
-
+- [3.1 Universal Agent Schema.](#31-universal-agent-schema)  
+- [3.2 Standard Internal Structure of Agentic AI (with Cognitive Layers).](#32-standard-internal-structure-of-agentic-ai-(with-cognitive-layers))  
+- [3.3 Agent Templates and Reusability.](#33-agent-templates-and-reusability)  
+- [3.4 Communication Standards.](#34-communication-standards)  
+- [3.5 Adaptability & Role Understanding](#35-adaptability-&-role-understanding)
 </details>
 
 <details>
-<summary>Phase 4 — MRDs Integration fo AgentOS Upgrade</summary>
+<summary>PHASE 4 — Enhancing AgentOS to Support the Framework</summary>
 
-- [Revisit FlowVoice, FlowSense, AgentMind Map.](#revisit-flowvoice-flowsense-agentmind-map)  
-- [Align with standards and library.](#align-with-standards-and-library)  
-- [Examples (Mind Map, FlowSense, FlowVoice).](#examples-mind-map-flowsense-flowvoice)  
-
-</details>
-
-<details>
-<summary>Phase 5 — Future Enhancements</summary>
-
-- [Cross-VM orchestration.](#cross-vm-orchestration)  
-- [Self-maintenance.](#self-maintenance)  
-- [Auto-deployment & scaling.](#auto-deployment--scaling)  
+- [4.1 What AgentOS Already Supports.](#41-what-agentOS-already-supports)  
+- [4.2 Required Enhancements.](#42-required-enhancements)  
+- [4.3 Why These Additions Matter.](#43-why-these-additions-matter)  
 
 </details>
 
 ---
+
 ## Phase 1 — Explaining the Agentic AI World Diagram</summary>
 
 *The "Agentic AI World" represents a conceptual ecosystem where autonomous agents, orchestrated by [AgentOS](https://github.com/genai-works-org/genai-agentos), interact through standardized structures and shared libraries. This world balances imagination with technical rigor — serving both as a blueprint and a vision for scalable agent-driven systems.*  
