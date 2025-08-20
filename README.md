@@ -51,7 +51,7 @@
 ---
 
 ### 1.1 Interpreting the Diagram
-![Agent AI World](images/IMG_6291.jpeg)
+![Agent AI World](images/IMG_6301.jpeg)
 The Agentic AI World diagram illustrates a conceptual model for deploying, managing, and scaling autonomous AI agents within a standardized operating system framework. At its core, the diagram emphasizes three interdependent components:
 
 1. **AgentOS (Orchestrator, VM Level)**  
