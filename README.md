@@ -48,20 +48,18 @@
 
 > **Note:** **AgentOS** refers to [genai-agentos](https://github.com/genai-works-org/genai-agentos) by GenAI Works.
 
----
-
 ### 1.1 Interpreting the Diagram
 ![Agent AI World](images/IMG_6301.jpeg)
 The Agentic AI World diagram illustrates a conceptual model for deploying, managing, and scaling autonomous AI agents within a standardized operating system framework. At its core, the diagram emphasizes three interdependent components:
 
 1. **AgentOS (Orchestrator, VM Level)**  
    - Represents the overarching orchestration layer.  
-   - Runs on a Virtual Machine (VM), which simplifies deployment, portability, and maintenance compared to container orchestration systems such as Kubernetes.  
+   - Runs on a Virtual Machine (VM), which simplifies deployment, portability, and maintenance.  
    - Provides a unified environment where multiple agents can be deployed, monitored, and coordinated.  
-   - Ensures inter-VM communication either through API calls or synchronous/asynchronous database interactions.  
+   - Ensures inter-VM communication either through MCP.  
 
 2. **Agentic AI Instances (Docker Containers per Function)**  
-   - Each agent runs in its own containerized environment (e.g., Docker), encapsulating a single function or role.  
+   - Each agent/s runs in its own containerized environment (e.g., Docker), encapsulating a function or role.  
    - Standard features of an agent include:  
      - *Within Pipeline*: ability to function as a sequential step.  
      - *Event-Driven or Reactor*: respond to triggers or system signals.  
@@ -75,8 +73,6 @@ The Agentic AI World diagram illustrates a conceptual model for deploying, manag
    - Designed to be scalable and self-descriptive, allowing newly added agents to be recognized immediately.  
    - Provides discoverability so the Agentic AI can browse, identify, and load the required agent for a given task.  
 
----
-
 **📊 CONCEPTUAL INSIGHT**
 
 The diagram highlights a balance between **standardization** and **modularity**:  
@@ -88,13 +84,9 @@ This separation ensures that:
 - The library serves as the source of truth for agent knowledge.  
 - The VM-based AgentOS acts as the stable execution substrate for diverse system flows.  
 
----
-
 ### 1.2 Clarifying the Core Components
 
 The **Agentic AI World** is built upon three tightly coupled yet distinct components: **AgentOS**, **Agentic AI instances**, and the **Agent Library**. Each serves a specialized role, but together they establish a self-contained ecosystem for orchestrating intelligent workflows.
-
----
 
 #### 1.2.1 AgentOS (VM Orchestrator Layer)
 
@@ -104,7 +96,7 @@ The **AgentOS** functions as the orchestration environment—the “operating sy
 **Key Characteristics:**
 - **VM-Based Deployment**  
   - Encapsulates agents inside a controlled VM environment.  
-  - Prioritizes simplicity in deployment and maintainability over more complex container orchestration systems such as Kubernetes.  
+  - Prioritizes simplicity in deployment and maintainability.
 - **Coordination Layer**  
   - Responsible for launching, monitoring, and coordinating agent containers.  
   - Facilitates inter-agent and inter-VM communication using standardized APIs.  
@@ -114,8 +106,6 @@ The **AgentOS** functions as the orchestration environment—the “operating sy
 
 💡 **Interpretation Insight:**  
 The **AgentOS** is not simply a “server”—it is the operational substrate that ensures agents function cohesively, reliably, and consistently across the enterprise system.
-
----
 
 #### 1.2.2 Agentic AI (Containerized Intelligence Units)
 
@@ -136,11 +126,6 @@ An **Agentic AI** represents a single-function autonomous unit deployed in its o
 - **Isolation** – Each agent runs independently, reducing risk of systemic failure.  
 - **Replaceability** – An agent can be swapped with an updated version without disrupting the entire system.  
 
-💡 **Interpretation Insight:**  
-The **Agentic AI containers** embody the principle of “function as a service” but enhanced with autonomy, making them versatile building blocks for any role.
-
----
-
 #### 1.2.3 Agent Library (Centralized Knowledge & Registry)
 
 The **Agent Library** serves as the catalog and knowledge base for all available agents. It ensures discoverability, standardization, and governance of agent functions.
@@ -159,14 +144,10 @@ The **Agent Library** serves as the catalog and knowledge base for all available
 - Supports **browsing, search, and recommendation** so flows can be built dynamically.  
 - Lays the groundwork for a **library management application** (to be expanded in Chapter 2).  
 
-💡 **Interpretation Insight:**  
-The **Agent Library** is not just storage—it is the semantic backbone that enables agents to be “self-aware” of their role, discoverable, and pluggable into flows.
-
 ## 1.3 Communication Mechanisms
 
 The strength of the **Agentic AI World** lies not only in its modular components but also in the standardized communication fabric that ensures interoperability, flexibility, and reliability across agents and orchestrators. Three principal mechanisms enable this exchange: **APIs, JSON-based messaging, and database synchronization.**
 
----
 
 ### 1.3.1 APIs (Application Programming Interfaces)
 
@@ -194,8 +175,6 @@ APIs form the primary conduit for communication between agents, the orchestrator
 
 💡 **Insight:** APIs are the *"nervous system"* of Agentic AI—while REST and event-driven APIs handle local reflexes, MCP is like the *"higher-order brain pathway"*, enabling multi-system coordination and external world interaction.
 
----
-
 ### 1.3.2 JSON Messaging Standard
 
 JSON serves as the universal lingua franca for data exchange. By enforcing a consistent input/output schema, agents achieve seamless integration regardless of their internal logic or programming language.
@@ -212,8 +191,6 @@ JSON serves as the universal lingua franca for data exchange. By enforcing a con
   - By adhering to a JSON contract, an agent can be reused in multiple flows without modification.  
 
 💡 **Insight:** JSON is not just a file format—it is the contractual glue that guarantees interoperability across a heterogeneous agent ecosystem.
-
----
 
 ### 1.3.3 Database Synchronization (Synchronous & Asynchronous)
 
@@ -232,25 +209,9 @@ For larger and more persistent workflows, databases serve as shared memory and c
 
 💡 **Insight:** Database synchronization ensures that flows can scale beyond ephemeral transactions, evolving into stateful systems capable of maintaining long-term operational memory.
 
----
-
 ### 📊 Integrated View of Communication
 ![Agentic Flow](images/IMG_6297.jpeg)
-
-```
-mermaid
-graph TD;
-    A[AgentOS (VM Orchestrator)];
-    A <-->|API Calls| B[Agentic AI Containers];
-    A -->|API Calls| C[Agent Library];
-    B -->|API Calls| C[Agent Library];
-    B <-->|JSON Messaging| B;
-    B -->|Sync / Async Writes| D[Shared Database];
-    A <-->|MCP Calls| E[Other VMs / Systems];
-```
        
----
-
 ### Deployment Note
 
 While **Kubernetes** is a widely used orchestration platform, the current design leverages **GenAI AgentOS** on **VM-based environments** for accessibility and simplicity.  
@@ -264,15 +225,11 @@ This choice does not preclude future **Kubernetes adoption** if scaling requires
 *This chapter focuses on the **conceptual and structural design** of the Agent Library.  
 The **technical specifications**—such as JSON/YAML schemas for agent definitions, coding conventions, and API standards—are provided in the **Annexes** as reference materials for implementation.*
 
----
-
 ### 2.1 Design Philosophy
 The **Agent Library** is the semantic backbone of the *Agentic AI World*.  
 Its purpose extends beyond storing agent definitions—it ensures that agents are discoverable, interoperable, and composable within any flow.  
 
 The design philosophy rests on three principles: **scalability, modularity, and auto-recognition**.
-
----
 
 ### 1. Scalable
 - The library must grow seamlessly as the number of agents expands from dozens to thousands.  
@@ -282,8 +239,6 @@ The design philosophy rests on three principles: **scalability, modularity, and 
 
 💡 **Analogy:** Just like a digital app store, the library should handle thousands of “apps” (agents) without losing performance or clarity.  
 
----
-
 ### 2. Modular
 - Each agent is self-contained—defined by its role, inputs, outputs, and dependencies.  
 - Agents are grouped into categories (e.g., NLP, Planning, Data I/O, Diagnostics) but can be recombined flexibly across flows.  
@@ -291,8 +246,6 @@ The design philosophy rests on three principles: **scalability, modularity, and 
 - Dependencies between agents are explicit, preventing “hidden couplings” that reduce reliability.  
 
 💡 **Analogy:** Think of the library as a box of LEGO bricks—each piece is modular, but the combinations are limitless.  
-
----
 
 ### 3. Auto-Recognizable
 - Newly introduced agents should be automatically recognized by the library without requiring manual registration.  
@@ -305,16 +258,12 @@ The design philosophy rests on three principles: **scalability, modularity, and 
 
 💡 **Analogy:** Like plugging in a USB drive, the agent should be ready to use immediately once placed in the library.  
 
----
-
 ✅ With this philosophy, the **Agent Library** is not just a storage system, but a **living ecosystem** that scales, evolves, and adapts without human bottlenecks.  
 
 ### 2.2 How Agents Are Grouped
 
 The **Agent Library** uses a **layered grouping system** to ensure clarity, reuse, and composability.  
 Instead of mixing all properties together, we separate what belongs to the agent itself from what is determined by the **Agentic AI runtime** and the **flow orchestration**.
-
----
 
 #### 1. Agent-Level: Grouping by Function  
 
@@ -342,8 +291,6 @@ Function is intrinsic to the agent. It describes what the agent does at its core
 
 💡 *This grouping belongs inside the Agent Library as metadata tags.*
 
----
-
 **📊 INTEGRATED PERSPECTIVE** 
 
 - **Function** → Defined in the agent (*what it does*).  
@@ -351,8 +298,6 @@ Function is intrinsic to the agent. It describes what the agent does at its core
 - **Role** → Assigned in the flow (*where it fits*).  
 
 This **separation of concerns** keeps agents lightweight and reusable, while allowing the AgentOS and flows to adapt their behavior dynamically.
-
----
 
 ✅ With this refinement, the **Agent Library** avoids redundancy, provides a clear classification, and aligns with how actual implementation would work.
 
@@ -363,8 +308,6 @@ It ensures that agents remain consistent, discoverable, and version-controlled, 
 
 📌 **Implementation Note**
 While this framework defines the need for governance mechanisms, the actual design and deployment of governance applications (UI, workflows, integration) will be detailed in a separate Implementation Guide. This ensures the framework remains timeless and principle-driven, while practical tooling can evolve with technology.
-
----
 
 #### 1. UI for Managing Agents (Add / Update / Remove)
 
@@ -386,8 +329,6 @@ The governance app provides a clean, browser-based interface (**client-side HTML
 
 💡 *Analogy: Think of this UI as a package manager (like npm or pip) but visually designed for agent definitions.*
 
----
-
 #### 2. Indexing and Search Functions
 
 To keep the library usable at scale, **indexing and smart search functions** are core.
@@ -399,8 +340,6 @@ To keep the library usable at scale, **indexing and smart search functions** are
 - **Version awareness** → filters that distinguish active, deprecated, or legacy agents.  
 
 💡 *This ensures developers don’t waste time reinventing agents — they can quickly discover what’s already in the library.*
-
----
 
 #### 3. Metadata Schema
 
@@ -422,15 +361,12 @@ Each agent must follow a **standard metadata schema** that makes it self-descrip
 - **Security Flags** → Notes on data sensitivity or safe usage.  
 
 **Why Strict Schema Matters**
-
 A consistent metadata structure ensures plug-and-play compatibility across the Agent Library:  
 - Agents can be automatically validated before entering the library.  
 - Flows can be generated and debugged faster, since inputs/outputs are predictable.  
 - The AgentOS can match and chain agents seamlessly without manual adjustments.  
 
 💡 *Analogy: Metadata is like a nutrition label for agents — standardized, easy to read, and ensures no surprises.*
-
----
 
 #### 🔑 Clarification on API Details
 - The Agent Library metadata is **descriptive only** (purpose, I/O, dependencies).  
@@ -492,13 +428,8 @@ Metadata --> LibraryGovernanceApp
 ```
 </pre>
 
----
-
 ### 2.4 Best Practices: Version Control, Lifecycle Management, Security
-
 The Agent Library is only as reliable as the practices that govern it. To ensure long-term stability, scalability, and trustworthiness, three pillars are emphasized: **version control, lifecycle management, and security.**
-
----
 
 #### 1. Version Control
 - **Semantic Versioning (semver)** → Agents follow `major.minor.patch` convention.  
@@ -509,8 +440,6 @@ The Agent Library is only as reliable as the practices that govern it. To ensure
 - **Deprecation Warnings** → Developers are alerted when flows reference outdated agents.  
 
 💡 *Analogy: Like software packages (npm, pip), versioning keeps agent evolution safe and predictable.*
-
----
 
 #### 2. Lifecycle Management
 - **States**:  
@@ -525,8 +454,6 @@ The Agent Library is only as reliable as the practices that govern it. To ensure
 
 💡 *Analogy: Like a library book lifecycle: new books arrive, old ones move to storage, but nothing is lost.*
 
----
-
 #### 3. Security
 - **Metadata Security Flags** → Identify agents that handle sensitive or restricted data.  
 - **Agent Validation** → Agents are scanned for malicious code or misconfigurations before entry.  
@@ -535,19 +462,12 @@ The Agent Library is only as reliable as the practices that govern it. To ensure
 
 💡 *Analogy: Like airport security checks, every agent must pass a safety inspection before being cleared for use.*
 
----
-
 ✅ With these best practices in place, the **Agent Library** becomes a resilient and trustworthy foundation, supporting innovation while preventing chaos as the ecosystem scales.
-
----
 
 ## 📖 Phase 3 — Standard Structure of Agentic AI
 
 ### 3.1 Universal Agent Schema
-
 The **Universal Agent Schema** defines the minimum contract every Agentic AI must follow to ensure interoperability inside the GenAI AgentOS. By enforcing consistent input/output handling, event awareness, and autonomous triggers, any agent can be seamlessly integrated, reused, and orchestrated without custom wiring.
-
----
 
 #### Core Principles
 
@@ -568,10 +488,7 @@ The **Universal Agent Schema** defines the minimum contract every Agentic AI mus
    - Certain agents may self-initiate tasks (e.g., monitoring or watchdog agents).  
    - Autonomous mode is standardized so that AgentOS can throttle, pause, or resume them safely.  
 
----
-
 #### JSON Schema as the Backbone
-
 All agent definitions rely on **JSON Schema** as the universal format:
 
 - **Input Schema** → Guarantees the required fields.  
@@ -579,21 +496,14 @@ All agent definitions rely on **JSON Schema** as the universal format:
 - **Events** → Lists what this agent can respond to.  
 - **Autonomous Flag** → Clarifies if the agent can self-run without external invocation.  
 
----
-
 #### Plug-and-Play Compatibility
-
 Because every agent follows this schema:
 
 - Agents can be swapped or updated without breaking flows.  
 - Flows can be auto-validated by AgentOS (input/output mismatches flagged instantly).  
 - The Agent Library can auto-generate documentation and visual previews from metadata.  
 
----
-
 💡 *Think of the schema as the “USB Standard” of Agentic AI — once an agent supports it, it can plug into any system without extra adapters.*
-
----
 
 ### 3.2 Standard Internal Structure of Agentic AI (with Cognitive Layers)
 ![Agentic AI](images/IMG_6299.jpeg)
@@ -636,16 +546,10 @@ Each Agentic AI follows a cognitive-inspired architecture that ensures it can pe
   - All interactions pass through the Guardrail Agent, ensuring compliance, security, and safe operation.
   - This keeps internal communication fast and efficient while maintaining strong governance at system boundaries.
 
----
-
 ### 3.3 Agent Templates and Reusability
-
 To avoid reinventing the wheel for every workflow, **Agent Templates** provide a standardized starting point for common agent patterns. Templates accelerate development, encourage best practices, and ensure structural consistency across the ecosystem.
 
----
-
 #### Default Templates
-
 The system provides a core set of predefined Agentic AI templates representing recurring roles:
 
 - **Data Transformer** → Cleans, normalizes, or enriches input data (e.g., convert CSV to JSON, text cleaning).  
