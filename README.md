@@ -603,7 +603,7 @@ Because every agent follows this schema:
 
 ---
 
-### 3.2 Standard Internal Structure of Agentic AI (Refined with Cognitive Layers)
+### 3.2 Standard Internal Structure of Agentic AI (with Cognitive Layers)
 ![Agentic AI](images/IMG_6299.jpeg)
 Each Agentic AI follows a cognitive-inspired architecture that ensures it can perceive inputs, execute tasks, remember context, and understand its role.
 
