@@ -603,7 +603,7 @@ Because every agent follows this schema:
 ---
 
 ### 3.2 Standard Internal Structure of Agentic AI (Refined with Cognitive Layers)
-
+![Agentic AI](images/IMG_6299.jpeg)
 Each Agentic AI follows a cognitive-inspired architecture that ensures it can perceive inputs, execute tasks, remember context, and understand its role.
 
 **Deployment Model:**
@@ -714,7 +714,7 @@ While this framework defines the need for governance mechanisms, the actual desi
 ---
 
 ### 3.4 Communication Standards  
-
+![Agentic Flow](images/IMG_6297.jpeg)
 For Agentic AI to remain interoperable and modular, all communication must adhere to strict standards. These ensure that agents from different teams, versions, or contexts can still connect seamlessly through AgentOS.  
 
 ---
