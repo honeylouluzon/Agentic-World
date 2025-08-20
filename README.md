@@ -768,6 +768,56 @@ For Agentic AI to remain interoperable and modular, all communication must adher
 
 💡 **Insight:** Event logs are the *“black box recorder”* of Agentic AI — vital for safety, accountability, and trust.  
 
+---
+
+### 3.5 Adaptability & Role Understanding
+
+For Agentic AI systems to operate flexibly across diverse tasks, they must not only process inputs but also understand the role they are expected to perform. Role-awareness ensures that both the **AgentOS** (ecosystem-level orchestration) and the **Agentic AI itself** (internal orchestration) can route tasks effectively.
+
+---
+
+#### Current State: Manual Role Assignment
+- Roles are defined at configuration time by developers or system architects.  
+- At the **AgentOS level**:  
+  - The Front-End Agentic AI is manually designated for user interaction.  
+  - A Planner Agentic AI is configured to decompose goals.  
+  - Knowledge or Action Agents are explicitly wired to serve downstream needs.  
+- At the **internal Agentic AI level**:  
+  - The *Think* layer is configured to route data to the correct sub-agent.  
+  - **Example**: If input = PDF → Data Processing agent → Knowledge agent for summarization.  
+
+This ensures reliability but requires human configuration of flows and mappings.
+
+---
+
+#### Near-Term Vision: Metadata-Driven Role Awareness
+- Each agent declares its role in the **Agent Library metadata schema** (e.g., *Knowledge Retriever*, *Decision Maker*, *Data Transformer*).  
+- When the **AgentOS** deploys an Agentic AI, it injects these role hints into runtime.  
+- The Agentic AI’s **Think component** then uses this metadata to decide:  
+  - Which agent should handle the incoming request.  
+  - How sub-agents should sequence their actions.  
+
+This step moves responsibility from hard-coded config to schema-driven adaptability.
+
+---
+
+#### Future State: Autonomous Role Resolution
+- **AgentOS and Agentic AIs evolve into a dynamic marketplace of roles**:  
+  - Each Agentic AI *submits itself* to AgentOS with metadata on capabilities.  
+  - AgentOS matches incoming tasks to the most appropriate role-holder.  
+- Within an Agentic AI:  
+  - The *Think* layer leverages LLM reasoning + metadata to dynamically assign roles to sub-agents, rather than relying only on static configs.  
+- **Benefits**:  
+  - **Routing** → Inputs are automatically matched to the right role.  
+  - **Orchestration** → New agents can join without reconfiguring the system.  
+  - **Autonomy** → Flows adapt to changing contexts with minimal human intervention.  
+
+---
+
+💡 **Insight**: Today, role assignment is manual and static. Tomorrow, with standardized metadata and runtime reasoning, role-awareness becomes adaptive and autonomous—a step toward self-organizing Agentic ecosystems.
+
+---
+
 
 
 
