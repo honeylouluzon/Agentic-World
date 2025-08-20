@@ -12,7 +12,7 @@
 </details>
 
 <details>
-<summary>Phase 2 — Agent Library Architecture & Maintenance Application</summary>
+<summary>Phase 2 — Agent Library Architecture</summary>
 
 - [2.1 Design Philosophy.](#21-design-philosophy)  
 - [2.2 How Agents Are Grouped.](#22-how-agents-are-grouped)  
@@ -220,7 +220,7 @@ This choice does not preclude future **Kubernetes adoption** if scaling requires
 
 ---
 
-## 📖 Phase 2 — Agent Library Architecture & Maintenance Application
+## 📖 Phase 2 — Agent Library Architecture
 
 *This chapter focuses on the **conceptual and structural design** of the Agent Library.  
 The **technical specifications**—such as JSON/YAML schemas for agent definitions, coding conventions, and API standards—are provided in the **Annexes** as reference materials for implementation.*
@@ -464,6 +464,8 @@ The Agent Library is only as reliable as the practices that govern it. To ensure
 
 ✅ With these best practices in place, the **Agent Library** becomes a resilient and trustworthy foundation, supporting innovation while preventing chaos as the ecosystem scales.
 
+---
+
 ## 📖 Phase 3 — Standard Structure of Agentic AI
 
 ### 3.1 Universal Agent Schema
@@ -560,8 +562,6 @@ The system provides a core set of predefined Agentic AI templates representing r
 
 💡 *These templates act like starter kits — developers only need to fill in specifics (e.g., input schema, data source) while the base behavior is predefined.*
 
----
-
 #### Custom Templates
 
 - Any composite agent that emerges during orchestration can be saved as a reusable template.  
@@ -571,8 +571,6 @@ The system provides a core set of predefined Agentic AI templates representing r
   - Share across teams or publish to the Agent Library.  
 
 **Example:** A custom “Translation + Summarization” agent can be packaged as one unit for reuse in multiple projects.
-
----
 
 #### Versioning & Sharing
 
@@ -584,8 +582,6 @@ The system provides a core set of predefined Agentic AI templates representing r
 - Templates can be extended:  
   - Add new capabilities.  
   - Adjust I/O schemas while maintaining backward compatibility.  
-
----
 
 #### Agentic Governance App
 
@@ -608,13 +604,9 @@ To prevent template sprawl and ensure consistent quality, a dedicated **Agentic 
  📌 **Implementation Note**
 While this framework defines the need for governance mechanisms, the actual design and deployment of governance applications (UI, workflows, integration) will be detailed in a separate Implementation Guide. This ensures the framework remains timeless and principle-driven, while practical tooling can evolve with technology.
 
----
-
 ### 3.4 Communication Standards  
 
 For Agentic AI to remain interoperable and modular, all communication must adhere to strict standards. These ensure that agents from different teams, versions, or contexts can still connect seamlessly through AgentOS.  
-
----
 
 #### 3.4.1 JSON as the Universal Data Format  
 - All inputs/outputs between agents are serialized as **JSON**.  
@@ -623,8 +615,6 @@ For Agentic AI to remain interoperable and modular, all communication must adher
 - This guarantees plug-and-play compatibility — if schemas match, agents can connect.  
 
 💡 **Analogy:** JSON is the *“Esperanto”* of the Agentic AI world — a shared language everyone can understand.  
-
----
 
 #### 3.4.2 API Standards for Invocation  
 - **RESTful APIs (default):**  
@@ -645,9 +635,7 @@ For Agentic AI to remain interoperable and modular, all communication must adher
 
 - **Inter-Agent Communication:**  
   - No hardcoded coupling — all calls go through **AgentOS routing**.  
-  - This avoids spaghetti connections and makes replacement/upgrades seamless.  
-
----
+  - This avoids spaghetti connections and makes replacement/upgrades seamless. 
 
 #### 3.4.3 Event Logs for Traceability  
 - Every agent interaction generates **structured event logs in JSON**.  
@@ -665,13 +653,9 @@ For Agentic AI to remain interoperable and modular, all communication must adher
 
 💡 **Insight:** Event logs are the *“black box recorder”* of Agentic AI — vital for safety, accountability, and trust.  
 
----
-
 ### 3.5 Adaptability & Role Understanding
 
 For Agentic AI systems to operate flexibly across diverse tasks, they must not only process inputs but also understand the role they are expected to perform. Role-awareness ensures that both the **AgentOS** (ecosystem-level orchestration) and the **Agentic AI itself** (internal orchestration) can route tasks effectively.
-
----
 
 #### Current State: Manual Role Assignment
 - Roles are defined at configuration time by developers or system architects.  
@@ -685,8 +669,6 @@ For Agentic AI systems to operate flexibly across diverse tasks, they must not o
 
 This ensures reliability but requires human configuration of flows and mappings.
 
----
-
 #### Near-Term Vision: Metadata-Driven Role Awareness
 - Each agent declares its role in the **Agent Library metadata schema** (e.g., *Knowledge Retriever*, *Decision Maker*, *Data Transformer*).  
 - When the **AgentOS** deploys an Agentic AI, it injects these role hints into runtime.  
@@ -695,8 +677,6 @@ This ensures reliability but requires human configuration of flows and mappings.
   - How sub-agents should sequence their actions.  
 
 This step moves responsibility from hard-coded config to schema-driven adaptability.
-
----
 
 #### Future State: Autonomous Role Resolution
 - **AgentOS and Agentic AIs evolve into a dynamic marketplace of roles**:  
@@ -709,8 +689,6 @@ This step moves responsibility from hard-coded config to schema-driven adaptabil
   - **Orchestration** → New agents can join without reconfiguring the system.  
   - **Autonomy** → Flows adapt to changing contexts with minimal human intervention.  
 
----
-
 💡 **Insight**: Today, role assignment is manual and static. Tomorrow, with standardized metadata and runtime reasoning, role-awareness becomes adaptive and autonomous—a step toward self-organizing Agentic ecosystems.
 
 ---
@@ -718,8 +696,6 @@ This step moves responsibility from hard-coded config to schema-driven adaptabil
 ## PHASE 4 — Enhancing AgentOS to Support the Framework
 
 In Chapters 1–3, we established the communication model, the Agent Library, and the standard structure of Agentic AI. While GenAI-AgentOS already provides the orchestration backbone, several enhancements are needed to fully support the framework.
-
----
 
 ### 4.1 What AgentOS Already Supports
 - **Agent registration** (agents can join, authenticate, become active/inactive).  
@@ -731,8 +707,6 @@ In Chapters 1–3, we established the communication model, the Agent Library, an
 - **Tool discovery** through MCP.  
 
 💡 *In short: AgentOS is already capable of running agents and connecting them through flows.*
-
----
 
 ### 4.2 Required Enhancements
 
@@ -767,9 +741,7 @@ To align with our framework vision, AgentOS needs additional layers:
 
 7. **Event Logging & Traceability**  
    - Standardized event logs for debugging, auditing, and security.  
-   - JSON logs with execution status, timestamps, and agent decisions.  
-
----
+   - JSON logs with execution status, timestamps, and agent decisions. 
 
 ### 4.3 Why These Additions Matter
 - **Consistency** → Every agent follows the same schema.  
@@ -778,9 +750,9 @@ To align with our framework vision, AgentOS needs additional layers:
 - **Transparency** → Logs and metadata ensure trust and traceability.  
 - **Adaptability** → Cognitive layers + behavior modes allow agents to evolve.  
 
----
-
 ✨ *With these enhancements, AgentOS evolves from a simple orchestrator into a full intelligent ecosystem manager—capable of governing agents, reusing knowledge, and enforcing safe scalable operations.*
+
+---
 
 
 
