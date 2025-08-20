@@ -602,7 +602,50 @@ Because every agent follows this schema:
 
 ---
 
-### 3.2 Agent Templates and Reusability
+### 3.2 Standard Internal Structure of Agentic AI (Refined with Cognitive Layers)
+
+Each Agentic AI follows a cognitive-inspired architecture that ensures it can perceive inputs, execute tasks, remember context, and understand its role.
+
+**Deployment Model:**
+- The AgentOS can launch new Agentic AI instances when needed.
+- Agents can be manually added by users in early-stage setups.
+- In advanced configurations, the AgentOS (or another Agentic AI) can automatically deploy new Agentic AIs and fetch required agent templates from the Agent Library.
+
+**Cognitive Layer Framework** *(inspired by GenAI.works knowledge. This part also considered the idea of Cobalt Mind by H.AI.D.&I.)*
+
+1. THINK → Role & Behavior Layer
+- Defines the purpose, role, and runtime behavior mode of the agent.
+- Reads its metadata from the Agent Library to know what it is supposed to do.
+- Determines execution style: Basic, Composite, Adaptive, or Autonomous.
+- This by default access will access the “LLM” to decide. It will have a default mindset(algorithm of how it will think to be discuss in Annex) that could be improve overtime in further update.
+- It will detect “SEE” to understand the input while considering “REMEMBER” additional input before it will trigger the “CAN” to perform the needed action using the agents.
+
+2. SEE → Input & Perception Layer
+- Captures inputs according to the JSON schema.
+- Handles different data modalities (text, API call, file, sensor, etc.).
+- Ensures input validation and normalization before execution.
+- JSON that handles the input was able to receive the information from other Agent either within a pipeline or from other autonomous Agent which includes monitoring Agent.
+
+3.	CAN → Action & Execution Layer
+- Executes the core task logic of the agent.
+- May call other internal agents or sub-modules to complete a task.
+- Produces output aligned with its declared schema.
+4.	REMEMBER → Memory & Context Layer
+- Stores short-term memory inside the agent (local JSON cache).
+- Can call a Memory Agent for shared or long-term state.
+- Enables adaptive/autonomous behavior by providing past context.
+5.	LLM Sub-Structure (Integrated Inside the Agent)
+- Unlike an “external bolt-on,” the LLM is a core sub-layer of the THINK and CAN layer when natural language reasoning, planning, or creativity is required.
+- Default Availability: The Agentic AI framework assumes all agents can access the “LLM” if needed, but lightweight agents may bypass it.
+6.	Communication & Guardrails
+- Inside the System (Internal Agent-to-Agent or DB calls): Direct, schema-validated communication — no guardrail needed.
+- Outside the System (Client requests, cross-VM, or external APIs):
+  - All interactions pass through the Guardrail Agent, ensuring compliance, security, and safe operation.
+  - This keeps internal communication fast and efficient while maintaining strong governance at system boundaries.
+
+---
+
+### 3.3 Agent Templates and Reusability
 
 To avoid reinventing the wheel for every workflow, **Agent Templates** provide a standardized starting point for common agent patterns. Templates accelerate development, encourage best practices, and ensure structural consistency across the ecosystem.
 
