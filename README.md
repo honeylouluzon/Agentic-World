@@ -171,7 +171,7 @@ The **Agent Library** serves as the catalog and knowledge base for all available
 The **Agent Library** is not just storage—it is the semantic backbone that enables agents to be “self-aware” of their role, discoverable, and pluggable into flows.
 
 ## 1.3 Communication Mechanisms
-
+![Agentic Flow](images/IMG_6297.jpeg)
 The strength of the **Agentic AI World** lies not only in its modular components but also in the standardized communication fabric that ensures interoperability, flexibility, and reliability across agents and orchestrators. Three principal mechanisms enable this exchange: **APIs, JSON-based messaging, and database synchronization.**
 
 ---
@@ -714,7 +714,7 @@ While this framework defines the need for governance mechanisms, the actual desi
 ---
 
 ### 3.4 Communication Standards  
-![Agentic Flow](images/IMG_6297.jpeg)
+
 For Agentic AI to remain interoperable and modular, all communication must adhere to strict standards. These ensure that agents from different teams, versions, or contexts can still connect seamlessly through AgentOS.  
 
 ---
