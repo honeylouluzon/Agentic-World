@@ -171,7 +171,7 @@ The **Agent Library** serves as the catalog and knowledge base for all available
 The **Agent Library** is not just storage—it is the semantic backbone that enables agents to be “self-aware” of their role, discoverable, and pluggable into flows.
 
 ## 1.3 Communication Mechanisms
-![Agentic Flow](images/IMG_6297.jpeg)
+
 The strength of the **Agentic AI World** lies not only in its modular components but also in the standardized communication fabric that ensures interoperability, flexibility, and reliability across agents and orchestrators. Three principal mechanisms enable this exchange: **APIs, JSON-based messaging, and database synchronization.**
 
 ---
@@ -243,6 +243,7 @@ For larger and more persistent workflows, databases serve as shared memory and c
 ---
 
 ### 📊 Integrated View of Communication
+![Agentic Flow](images/IMG_6297.jpeg)
 
 ```
 mermaid
