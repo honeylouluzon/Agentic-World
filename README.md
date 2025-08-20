@@ -173,8 +173,6 @@ APIs form the primary conduit for communication between agents, the orchestrator
     - Seamless integration with external ecosystems (cloud apps, web services).
     - Future extensibility without re-engineering core communication.
 
-💡 **Insight:** APIs are the *"nervous system"* of Agentic AI—while REST and event-driven APIs handle local reflexes, MCP is like the *"higher-order brain pathway"*, enabling multi-system coordination and external world interaction.
-
 ### 1.3.2 JSON Messaging Standard
 
 JSON serves as the universal lingua franca for data exchange. By enforcing a consistent input/output schema, agents achieve seamless integration regardless of their internal logic or programming language.
@@ -206,8 +204,6 @@ For larger and more persistent workflows, databases serve as shared memory and c
 
 - **Agent-as-Database-Manager**  
   - A specialized agent may take responsibility for monitoring and validating records, ensuring data integrity and lifecycle compliance.  
-
-💡 **Insight:** Database synchronization ensures that flows can scale beyond ephemeral transactions, evolving into stateful systems capable of maintaining long-term operational memory.
 
 ### 📊 Integrated View of Communication
 ![Agentic Flow](images/IMG_6297.jpeg)
@@ -265,7 +261,7 @@ The design philosophy rests on three principles: **scalability, modularity, and 
 The **Agent Library** uses a **layered grouping system** to ensure clarity, reuse, and composability.  
 Instead of mixing all properties together, we separate what belongs to the agent itself from what is determined by the **Agentic AI runtime** and the **flow orchestration**.
 
-#### 1. Agent-Level: Grouping by Function  
+#### Grouping by Function  
 
 Function is intrinsic to the agent. It describes what the agent does at its core.
 
@@ -275,7 +271,7 @@ Function is intrinsic to the agent. It describes what the agent does at its core
   _(e.g., summarizers, translators, fact-checkers)_  
 - **Decision Agents** → Output choices or instructions based on inputs.  
   _(e.g., flow optimizer, planner)_  
-- **Action Agents** → Perform or execute commands directly.  
+- **Action Agents** → Perform or execute commands/instruction directly.  
   _(e.g., API caller, database writer)_
   Two Types:
   1. **Client-Facing Action Agents**
