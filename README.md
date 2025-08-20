@@ -613,31 +613,31 @@ Each Agentic AI follows a cognitive-inspired architecture that ensures it can pe
 
 **Cognitive Layer Framework** *(inspired by GenAI.works knowledge. This part also considered the idea of Cobalt Mind by H.AI.D.&I.)*
 
-1. THINK → Role & Behavior Layer
+1. **THINK → Role & Behavior Layer**
 - Defines the purpose, role, and runtime behavior mode of the agent.
 - Reads its metadata from the Agent Library to know what it is supposed to do.
 - Determines execution style: Basic, Composite, Adaptive, or Autonomous.
 - This by default access will access the “LLM” to decide. It will have a default mindset(algorithm of how it will think to be discuss in Annex) that could be improve overtime in further update.
 - It will detect “SEE” to understand the input while considering “REMEMBER” additional input before it will trigger the “CAN” to perform the needed action using the agents.
 
-2. SEE → Input & Perception Layer
+2. **SEE → Input & Perception Layer**
 - Captures inputs according to the JSON schema.
 - Handles different data modalities (text, API call, file, sensor, etc.).
 - Ensures input validation and normalization before execution.
 - JSON that handles the input was able to receive the information from other Agent either within a pipeline or from other autonomous Agent which includes monitoring Agent.
 
-3.	CAN → Action & Execution Layer
+3.	**CAN → Action & Execution Layer**
 - Executes the core task logic of the agent.
 - May call other internal agents or sub-modules to complete a task.
 - Produces output aligned with its declared schema.
-4.	REMEMBER → Memory & Context Layer
+4.	**REMEMBER → Memory & Context Layer**
 - Stores short-term memory inside the agent (local JSON cache).
 - Can call a Memory Agent for shared or long-term state.
 - Enables adaptive/autonomous behavior by providing past context.
-5.	LLM Sub-Structure (Integrated Inside the Agent)
+5.	**LLM Sub-Structure *(Integrated Inside the Agent)***
 - Unlike an “external bolt-on,” the LLM is a core sub-layer of the THINK and CAN layer when natural language reasoning, planning, or creativity is required.
 - Default Availability: The Agentic AI framework assumes all agents can access the “LLM” if needed, but lightweight agents may bypass it.
-6.	Communication & Guardrails
+6.	**Communication & Guardrails**
 - Inside the System (Internal Agent-to-Agent or DB calls): Direct, schema-validated communication — no guardrail needed.
 - Outside the System (Client requests, cross-VM, or external APIs):
   - All interactions pass through the Guardrail Agent, ensuring compliance, security, and safe operation.
@@ -690,9 +690,9 @@ The system provides a core set of predefined Agentic AI templates representing r
 
 ---
 
-#### Template Governance App
+#### Agentic Governance App
 
-To prevent template sprawl and ensure consistent quality, a dedicated **Template Governance App** mirrors the role of the Agent Library Governance App:
+To prevent template sprawl and ensure consistent quality, a dedicated **Agentic Governance App** mirrors the role of the Agent Library Governance App:
 
 - **UI Management**: Add, update, deprecate, or remove templates.  
 - **Indexing & Search**: Browse templates by role (e.g., transformer, retriever) or by metadata (purpose, version, tags).  
@@ -710,5 +710,64 @@ To prevent template sprawl and ensure consistent quality, a dedicated **Template
 
  📌 **Implementation Note**
 While this framework defines the need for governance mechanisms, the actual design and deployment of governance applications (UI, workflows, integration) will be detailed in a separate Implementation Guide. This ensures the framework remains timeless and principle-driven, while practical tooling can evolve with technology.
+
+---
+
+### 3.4 Communication Standards  
+
+For Agentic AI to remain interoperable and modular, all communication must adhere to strict standards. These ensure that agents from different teams, versions, or contexts can still connect seamlessly through AgentOS.  
+
+---
+
+#### 3.4.1 JSON as the Universal Data Format  
+- All inputs/outputs between agents are serialized as **JSON**.  
+- JSON is lightweight, human-readable, and compatible with most programming languages.  
+- Each agent’s input/output schemas are defined in the **Agent Library metadata**.  
+- This guarantees plug-and-play compatibility — if schemas match, agents can connect.  
+
+💡 **Analogy:** JSON is the *“Esperanto”* of the Agentic AI world — a shared language everyone can understand.  
+
+---
+
+#### 3.4.2 API Standards for Invocation  
+- **RESTful APIs (default):**  
+  - Each agent exposes a standard `/invoke` endpoint.  
+  - **Request:**  
+    ```json
+    { "inputs": {...}, "context": {...} }
+    ```  
+  - **Response:**  
+    ```json
+    { "outputs": {...}, "status": "success|error" }
+    ```  
+  - Ensures stateless execution and easy orchestration by AgentOS.  
+
+- **Event-Driven APIs (optional):**  
+  - Agents may support subscriptions to events (e.g., `"onData"`, `"onError"`, `"onComplete"`).  
+  - Useful for monitoring or reactive flows (e.g., anomaly detection, real-time alerts).  
+
+- **Inter-Agent Communication:**  
+  - No hardcoded coupling — all calls go through **AgentOS routing**.  
+  - This avoids spaghetti connections and makes replacement/upgrades seamless.  
+
+---
+
+#### 3.4.3 Event Logs for Traceability  
+- Every agent interaction generates **structured event logs in JSON**.  
+- Event logs capture:  
+  - Timestamp of execution.  
+  - Agent invoked and version.  
+  - Inputs/outputs summary.  
+  - Errors or anomalies.  
+  - Execution duration and resource usage.  
+
+- Logs serve three purposes:  
+  1. **Debugging** — tracing why a flow broke.  
+  2. **Auditing** — tracking agent decisions (important for governance & compliance).  
+  3. **Optimization** — identifying performance bottlenecks.  
+
+💡 **Insight:** Event logs are the *“black box recorder”* of Agentic AI — vital for safety, accountability, and trust.  
+
+
 
 
