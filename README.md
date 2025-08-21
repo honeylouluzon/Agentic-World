@@ -206,7 +206,7 @@ For larger and more persistent workflows, databases serve as shared memory and c
   - A specialized agent may take responsibility for monitoring and validating records, ensuring data integrity and lifecycle compliance.  
 
 ### 📊 Integrated View of Communication
-![Agentic Flow](images/IMG_6297.jpeg)
+![Agentic Flow](images/IMG_6311.jpeg)
        
 ### Deployment Note
 
