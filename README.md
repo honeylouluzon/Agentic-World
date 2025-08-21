@@ -504,7 +504,7 @@ Because every agent follows this schema:
 💡 *Think of the schema as the “USB Standard” of Agentic AI — once an agent supports it, it can plug into any system without extra adapters.*
 
 ### 3.2 Standard Internal Structure of Agentic AI (with Cognitive Layers)
-![Agentic AI](images/IMG_6299.jpeg)
+![Agentic AI](images/IMG_6312.jpeg)
 Each Agentic AI follows a cognitive-inspired architecture that ensures it can perceive inputs, execute tasks, remember context, and understand its role.
 
 **Deployment Model:**
