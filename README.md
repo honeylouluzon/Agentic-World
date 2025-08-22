@@ -1,5 +1,5 @@
 # Agentic Framework
-*AI-Co Assistant: ChatGPT.*
+*This document is prepared with ChatGPT as AI-Co Assistant*
 
 ## 📖 Table of Contents
 
