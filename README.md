@@ -1,4 +1,5 @@
 # Agentic Framework
+*AI-Co Assistant: ChatGPT.*
 
 ## 📖 Table of Contents
 
