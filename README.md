@@ -1,4 +1,4 @@
-# Agentic Framework
+# Agentic World
 *This document is prepared with ChatGPT as AI-Co Assistant*
 
 ## 📖 Table of Contents
