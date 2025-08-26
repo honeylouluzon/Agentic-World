@@ -47,7 +47,7 @@ Version 1.0
 ## Phase 1 — Explaining the Agentic AI World Diagram</summary>
 
 *The "Agentic AI World" represents a conceptual ecosystem where autonomous agents, orchestrated by [AgentOS](https://github.com/genai-works-org/genai-agentos), interact through standardized structures and shared libraries. This world balances imagination with technical rigor — serving both as a blueprint and a vision for scalable agent-driven systems.*  
-*This concept could be managed setup but aims to make a Conscious Agentic AI System based on the idea of Consciousness Continuum Paper by Samuel J. Cummings, III.*
+*This concept aims to make a Conscious Agentic AI System based on the idea of Consciousness Continuum Paper by Samuel J. Cummings, III.*
 
 > **Note:** **AgentOS** refers to [genai-agentos](https://github.com/genai-works-org/genai-agentos) by GenAI Works.
 
