@@ -1,5 +1,5 @@
 # Agentic World
-Version 1.0
+Version 1.0  
 *This document is prepared with ChatGPT as AI-Co Assistant*
 
 ## 📖 Table of Contents
