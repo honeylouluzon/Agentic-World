@@ -328,7 +328,7 @@ Each Agentic AI follows a cognitive-inspired architecture that ensures it can pe
 - Can call a Memory Agent that access shared or long-term state.
 - Enables adaptive/autonomous behavior by providing past context.
 
-**LLM***
+**LLM**
 - Default Availability: The Agentic AI assumes all agents can access the “LLM” if needed, but lightweight agents may bypass it.
 - In Agentic World, LLM is a separate Agentic AI which could be self hosted within the AgentOS but could also consider to access LLM Provider with more advance capability such as OpenAI
 
